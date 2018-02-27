@@ -6,16 +6,16 @@ import java.util.Scanner;
   double total = 0;
   int productId;
 
-  System.out.print("Please enter a product number: ")
+  System.out.print("Please enter a product number: ");
   productId = input.nextInt();
 
   while(productId !=0){
 
-    if(product
+    if(productId >= 1 && productId <= 5){
     System.out.print("Enter a quantity sold: ");
     int quantity = input.nextInt();
 
-    switch(productId >=1 && ){
+    switch(productId){
       case 1:
        total += quantity * 2.98;
        break;
@@ -32,16 +32,17 @@ import java.util.Scanner;
        total += quantity * 6.87;
        break;
      }
-   }else if(productId !=0)
+   }else
      System.out.println("ProductId must be 1 to 5");
 
     System.out.println("Please enter a product number (0 to stop): ");
+    productId = input.nextInt();
     }
     System.out.println("Total of products sold is: ");
     System.out.println(Math.round(total*10000.0/10000.0));
 
 
 
-  }
+
   }
  }
